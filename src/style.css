@@ -1,0 +1,66 @@
+.navPage {
+  background-color: #ddd;
+  margin: 0;
+}
+.navPage li {
+  display: inline-block;
+  margin: 10px;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #666;
+  padding: 20px;
+}
+.carouselDiv img {
+  width: 100%;
+  height: 90vh;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  text-decoration: underline;
+}
+.contactForm input {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+}
+.profileImage {
+  width: 100px;
+  height: 100px;
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+}
+.calcBtn {
+  width: 30%;
+  margin: 10px 100px;
+  background-image: linear-gradient(
+    to top,
+    rgb(125, 134, 139),
+    rgb(195, 207, 212)
+  );
+  text-align: center;
+  border-radius: 10px;
+}
+.calcBtn input {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.calcBtn button {
+  padding: 20px;
+  margin: 6px;
+  width: 100px;
+  display: inline-block;
+  border-radius: 20%;
+  box-shadow: 1px 2px 4px;
+  border: none;
+}
+.calcBtn button:hover {
+  background-color: #000;
+  color: #fff;
+}
