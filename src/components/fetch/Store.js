@@ -5,11 +5,9 @@ const Store = () => {
   const [fetchData, setFetchData] = useState([]);
 
   const fetchFun = async () => {
-    setTimeout(() => {
-      fetch(URL)
-        .then((response) => response.json())
-        .then((data) => setFetchData(data));
-    }, [2000]);
+    fetch(URL)
+      .then((response) => response.json())
+      .then((data) => setFetchData(data));
   };
   fetchFun();
 
@@ -18,15 +16,21 @@ const Store = () => {
   }
   return (
     <div>
-      {fetchData.map((item, idx) => {
-        return (
-          <div key={idx} style={{ width: '32%', display: 'inline-block' }}>
-            <h1>Id : {item.id}</h1>
-            <h1>Title : {item.title}</h1>
-            <img src={item.thumbnailUrl} alt="img" />
-          </div>
-        );
-      })}
+      {fetchData?.length ? (
+        <div>
+          {fetchData.map((item, idx) => {
+            return (
+              <div key={idx} style={{ width: '32%', display: 'inline-block' }}>
+                <h1>Id : {item.id}</h1>
+                <h1>Title : {item.title}</h1>
+                <img src={item.thumbnailUrl} alt="img" />
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <h1 style={{ textAlign: 'center' }}>Loading....</h1>
+      )}
     </div>
   );
 };
